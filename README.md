@@ -10,9 +10,7 @@
 <li>Second item</li>
 <li>Third item</li>
 <li>Fourth item</li>
-</ul>
   
-</h10>
 
  ```
  DROP TABLE sales;
@@ -31,13 +29,12 @@
  
 ```
 
-<h10>
- <ul>
+
       <li>
 <strong><em> Constraints </em></strong> (restrições) mantém os dados do usuário restritos, e assim evitam que dados inválidos sejam inseridos no banco. A mera definição do tipo de dado para uma coluna é por si só um constraint. Por exemplo, uma coluna de tipo DATE restringe o conteúdo da mesma para datas válidas. 
       </li>
-  <ul>
-</h10>
+
+
 
 ```
 DROP TABLE sales;
@@ -67,11 +64,29 @@ DROP TABLE items;
 
 DROP TABLE companies;
 ```
+	 
+
+      <li>
+<strong><em> Constraints </em></strong> (restrições) mantém os dados do usuário restritos, e assim evitam que dados inválidos sejam inseridos no banco. A mera definição do tipo de dado para uma coluna é por si só um constraint. Por exemplo, uma coluna de tipo DATE restringe o conteúdo da mesma para datas válidas. 
+      </li>
 
 
 
+```
+CREATE TABLE customers
+(
+customer_id INT,
+first_name VARCHAR (255),
+last_name VARCHAR (255),
+email_address VARCHAR (255),
+number_of_complaints INT,
 
-
+PRIMARY KEY (customer_id),
+UNIQUE KEY (email_address)
+);
+```
+</ul>
+</h10>
 
 
 
