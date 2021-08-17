@@ -136,6 +136,26 @@ DROP INDEX email_address;
 | Content Cell  | 0 |
 | Content Cell  | 1 |
 	
+	
+```
+DROP TABLE customers;
+
+CREATE TABLE customers
+(
+customer_id INT,
+first_name VARCHAR (255),
+last_name VARCHAR (255),
+email_address VARCHAR (255),
+number_of_complaints INT,
+
+PRIMARY KEY (customer_id)
+);
+
+
+ALTER TABLE customers
+CHANGE COLUMN number_of_complaints number_of_complaints_changed INT DEFAULT 0;	
+```
+-----------------------------------------------------------	
 </ul>
 </h10>
 
