@@ -70,8 +70,10 @@ DROP TABLE companies;
 <strong><em> Constraints </em></strong> (restrições) mantém os dados do usuário restritos, e assim evitam que dados inválidos sejam inseridos no banco. A mera definição do tipo de dado para uma coluna é por si só um constraint. Por exemplo, uma coluna de tipo DATE restringe o conteúdo da mesma para datas válidas. 
       </li>
 
-
-
+-----------------------------------------------------------	
+	
+<li><strong><em> UNIQUE KEY </em></strong></li>
+	
 ```
 CREATE TABLE customers
 (
@@ -84,7 +86,27 @@ number_of_complaints INT,
 PRIMARY KEY (customer_id),
 UNIQUE KEY (email_address)
 );
+	
+or
+	
+DROP TABLE customers;
+
+CREATE TABLE customers
+(
+customer_id INT,
+first_name VARCHAR (255),
+last_name VARCHAR (255),
+email_address VARCHAR (255),
+number_of_complaints INT,
+
+PRIMARY KEY (customer_id)
+);
+
+ALTER TABLE customers
+ADD UNIQUE KEY (email_address);
+	
 ```
+-----------------------------------------------------------		
 </ul>
 </h10>
 
