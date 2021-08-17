@@ -93,7 +93,7 @@ DROP TABLE customers;
 
 CREATE TABLE customers
 (
-customer_id INT,
+customer_id INT AUTO_INCREMENT,
 first_name VARCHAR (255),
 last_name VARCHAR (255),
 email_address VARCHAR (255),
@@ -111,7 +111,7 @@ DROP TABLE customers;
 
 CREATE TABLE customers
 (
-customer_id INT,
+customer_id INT AUTO_INCREMENT,
 first_name VARCHAR (255),
 last_name VARCHAR (255),
 email_address VARCHAR (255),
