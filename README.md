@@ -127,7 +127,15 @@ ALTER TABLE customers
 DROP INDEX email_address;
 	
 ```
------------------------------------------------------------		
+-----------------------------------------------------------	
+	
+<li><strong><em> DEAFAULT </em></strong> </li>
+	
+| First Header  | Default |
+| ------------- | ------- |
+| Content Cell  | 0 |
+| Content Cell  | 1 |
+	
 </ul>
 </h10>
 
