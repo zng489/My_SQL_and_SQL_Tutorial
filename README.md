@@ -57,6 +57,16 @@ ADD FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON DELETE CASCA
 ALTER TABLE sales
 DROP FOREIGN KEY sales_ibfk_1;
 ```
+	 
+```
+DROP TABLE sales;
+
+DROP TABLE customers;
+
+DROP TABLE items;
+
+DROP TABLE companies;
+```
 
 
 
