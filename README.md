@@ -14,6 +14,30 @@
   
 </h10>
 
+ ```
+ DROP TABLE sales;
+
+ CREATE TABLE sales
+ (
+	 purchase_number INT AUTO_INCREMENT,
+	 date_of_purchase DATE NOT NULL,
+	 customer_id INT,
+	 item_code VARCHAR(10),
+ PRIMARY KEY (purchase_number)
+ );
+
+ ALTER TABLE Sales
+ ADD FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON DELETE CASCADE;
+ 
+```
+
+<h10>
+ <ul>
+      <li>
+<strong><em> Constraints </em></strong> (restrições) mantém os dados do usuário restritos, e assim evitam que dados inválidos sejam inseridos no banco. A mera definição do tipo de dado para uma coluna é por si só um constraint. Por exemplo, uma coluna de tipo DATE restringe o conteúdo da mesma para datas válidas. 
+      </li>
+  <ul>
+</h10>
 
 
 
