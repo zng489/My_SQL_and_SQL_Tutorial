@@ -239,7 +239,64 @@ INSERT INTO companies (headquarters_phone_number, company_name)
 VALUES ('+1 (202) 555-0196)', 'Company A');
 
 SELECT * FROM companies;
-	```
+	
+	
+SELECT 
+    first_name, last_name
+FROM
+    employees;
+    
+/* 
+WHERE Condition
+*/
+    
+SELECT * FROM employees
+WHERE first_name = 'Denis';
+
+SELECT * FROM employees
+WHERE first_name = 'Denis' AND gender = 'F';
+
+
+SELECT * FROM employees
+WHERE first_name = 'Denis' OR first_name = 'Elvis';
+
+
+SELECT * FROM employees
+WHERE first_name = 'Denis' AND gender = 'M' OR first_name = 'Elvis';
+
+SELECT * FROM employees
+WHERE first_name = 'Denis' AND (gender = 'M' OR gender = 'F');
+
+
+/* 
+IN - NOT IN
+*/
+
+SELECT * FROM employees
+WHERE first_name = 'Cathie' OR first_name = 'Mark' OR first_name = 'Nathan';
+
+SELECT * FROM employees
+WHERE first_name IN ('Cathie','Mark','Nathan');
+
+
+SELECT * FROM employees
+WHERE first_name NOT IN ('Cathie','Mark','Nathan');
+
+/* 
+LIKE - NOT LIKE
+*/
+
+# Mar% --> Mar% any character
+SELECT * FROM employees
+WHERE first_name LIKE ('Mar%'); 
+
+# Mar% --> Mar% any 4 character
+SELECT * FROM employees
+WHERE first_name LIKE ('Mar_');
+
+SELECT * FROM employees
+WHERE first_name NOT LIKE ('%Mar%');
+```
 	
 	
 	
