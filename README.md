@@ -296,6 +296,64 @@ WHERE first_name LIKE ('Mar_');
 
 SELECT * FROM employees
 WHERE first_name NOT LIKE ('%Mar%');
+	
+SELECT 
+    first_name, last_name
+FROM
+    employees;
+    
+/* 
+BETWEEN - AND
+*/
+
+SELECT * FROM employees
+WHERE hire_date NOT BETWEEN '1990-01-01' AND '2000-01-01';
+# BETWEEN '1990-01-01' ---------- '2000-01-01'
+# -------- NOT BETWEEN '1990-01-01' AND '2000-01-01' -----------
+# the hire_date is before '1990-01-01'  or the hire_date is after '2000-01-01'
+
+/* 
+IS NOT NULL
+*/
+
+SELECT * FROM employees
+WHERE first_name IS NOT NULL;
+
+SELECT * FROM employees
+WHERE first_name IS NULL;
+
+
+/* 
+Other comparison operator
+*/
+
+SELECT * FROM employees
+WHERE first_name = 'Mark';
+
+SELECT * FROM employees
+WHERE first_name != 'Mark';
+
+SELECT * FROM employees
+WHERE hire_date > '2000-01-01';
+
+SELECT * FROM employees
+WHERE hire_date >= '2000-01-01';
+
+/* 
+SELECTING DISTINCT
+*/
+
+SELECT gender FROM employees;
+#|gender|
+#|  M  |
+#|  F  |
+#|  M  |	
+
+SELECT DISTINCT gender FROM employees;
+#|gender|
+#|  M  |
+#|  F  	
+	
 ```
 	
 	
