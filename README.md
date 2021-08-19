@@ -519,8 +519,14 @@ WHERE conditions;
 	
 USE employees;
 SELECT * FROM employees
-WHERE emp_no = 999901;
-```
+WHERE emp_no = 999901;	
+```	
+| Name     | Character || Name     | Character |
+| ---      | ---       |
+| Backtick | `         |
+
+
+	
 -----------------------------------------------------------	
 </ul>
 </h10>
