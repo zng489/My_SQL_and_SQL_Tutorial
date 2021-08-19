@@ -354,6 +354,116 @@ SELECT DISTINCT gender FROM employees;
 #|  M  |
 #|  F  	
 	
+	
+
+/* 
+Introduction to Aggregate Functions
+COUNT()
+SUM()
+MIN()
+MAX()
+AVG()
+*/
+
+SELECT count(emp_no) FROM employees;
+
+SELECT * FROM employees WHERE first_name IS NULL;
+
+SELECT COUNT(emp_no) FROM employees;
+
+SELECT COUNT(first_name) FROM employees;
+# Differents COUNT names
+
+
+
+/* 
+ORDER BY
+*/
+
+SELECT * FROM employees ORDER BY first_name;
+
+SELECT * FROM employees ORDER BY first_name ASC;
+
+SELECT * FROM employees ORDER BY first_name DESC;
+
+SELECT * FROM employees ORDER BY emp_no DESC;
+
+/* 
+ORDER BY
+*/
+
+SELECT first_name FROM employees GROUP BY first_name;
+# first_name
+# Georgi
+# Bezalel
+# Parto
+# Chirstian
+# Kyoichi
+
+SELECT DISTINCT first_name FROM employees;
+# first_name
+# Georgi
+# Bezalel
+# Parto
+# Chirstian
+# Kyoichi
+
+SELECT COUNT(first_name) FROM employees GROUP BY first_name;
+
+SELECT first_name, COUNT(first_name) FROM employees GROUP BY first_name;
+# first_name | COUNT(first_name)
+# Georgi	      253
+# Bezalel	      228
+# Parto		      228
+
+SELECT 
+    first_name, COUNT(first_name)
+FROM
+    employees
+GROUP BY first_name
+ORDER BY first_name DESC;
+
+SELECT column_names(s)
+FROM table_name
+WHERE conditions
+GROUP BY column_names(s)
+ORDER BY column_name(s);
+
+############################################
+/* 
+Using Aliases (AS)
+*/
+
+SELECT 
+    first_name, COUNT(first_name) AS names_count
+FROM
+    employees
+GROUP BY first_name
+ORDER BY first_name;
+
+/* 
+HAVING
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+HAVING COUNT()
+*/
+
+SELECT 
+   *
+FROM
+    employees
+HAVING hire_date >= '2000-01-01';
+
+
+
+SELECT 
+    first_name, COUNT(first_name) AS names_count
+FROM
+    employees
+GROUP BY first_name
+HAVING COUNT(first_name) > 250
+ORDER BY first_name;
+
+	
 ```
 	
 	
