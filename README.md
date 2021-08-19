@@ -462,8 +462,51 @@ FROM
 GROUP BY first_name
 HAVING COUNT(first_name) > 250
 ORDER BY first_name;
-
 	
+	
+SELECT 
+    *
+FROM
+    employees
+ORDER BY emp_no DESC
+LIMIT 10;
+
+INSERT INTO employees 
+( 
+emp_no,
+birth_date,
+first_name, 
+last_name, 
+gender, 
+hire_date
+ ) VALUES
+ (
+999901,
+'1986-04-21',
+'John',
+'Smith',
+'M',
+'2011-01-01'
+ )
+ 
+ 
+ CREATE TABLE departments_dup
+ (
+ dept_no CHAR(4) NOT NULL,
+ dept_name VARCHAR(40) NOT NULL
+ );
+ 
+ 
+ INSERT INTO departments_dup
+ (
+ dept_no,
+ dept_name
+ )
+ SELECT * FROM departments;
+ 
+ SELECT * FROM departments_dup
+ ORDER BY dept_no;
+
 ```
 	
 	
