@@ -591,7 +591,33 @@ DELETE FROM departments_dup;
 ROLLBACK;
 
 	
------------------------------------------------------------	
+-----------------------------------------------------------
+```
+SELECT AVG(salary)
+FROM salaries;
+
+|AVG(salary)|
+-------------
+|63761.2043|
+
+-------------------------------------------------
+
+SELECT ROUND(AVG(salary)) 
+FROM salaries;
+
+# ROUND give the control of decimal numbers
+|AVG(salary)|
+-------------
+|63761|
+
+SELECT ROUND(AVG(salary),2) 
+FROM salaries;
+
+# ROUND give the control of decimal numbers
+|AVG(salary)|
+-------------
+|63761.20|
+```
 </ul>
 </h10>
 
