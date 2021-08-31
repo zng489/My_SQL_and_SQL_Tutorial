@@ -569,6 +569,26 @@ hire_date
 | ---      | ---       |
 | Backtick | `         |
 
+# DELETE FROM table_name
+# WHERE conditions;
+
+USE employees;
+COMMIT;
+
+SELECT * FROM employees WHERE emp_no = 99993;
+SELECT * FROM titles WHERE emp_no = 99993;
+
+
+DELETE FROM employees WHERE emp_no = 99993;
+
+ROLLBACK;
+
+
+SELECT * FROM departments_dup ORDER BY dept_no;
+
+DELETE FROM departments_dup;
+
+ROLLBACK;
 
 	
 -----------------------------------------------------------	
