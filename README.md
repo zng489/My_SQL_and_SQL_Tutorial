@@ -618,6 +618,37 @@ FROM salaries;
 -------------
 |63761.20|
 ```
+-----------------------------------------------------
+```
+SELECT * FROM departments
+ORDER BY dept_no;
+
+|dept_no|dept_name|
+d001	Marketing
+d002	Finance
+d003	Human Resources
+d004	Production
+d005	Development
+d006	Quality Management
+d007	Sales
+d008	Research
+d009	Customer Service
+NULL	NULL	
+
+SELECT dept_no, IFNULL(dept_name,'Department name not provide') as dept_name
+FROM departments
+
+dept_no	IFNULL(dept_name,'Department name not provide')
+d009	Customer Service
+d005	Development
+d002	Finance
+d003	Human Resources
+d001	Marketing
+d004	Production
+d006	Quality Management
+d008	Research
+d007	Sales
+```
 </ul>
 </h10>
 
