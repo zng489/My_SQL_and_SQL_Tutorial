@@ -655,17 +655,31 @@ COALESCE
 ```	
 <li><strong><em> DEAFAULT </em></strong> </li>	
 	
-Example:	
+Example:
 	
-|Firstname|Surname|Petname|
-| ------------- | ------- | ------- |
-| Content Cell  | 0 | Content Cell  | 0 |
-| Content Cell  | 1 | Content Cell  | 0 |
-| Content Cell  | 0 | Content Cell  | 0 |
-| Content Cell  | 0 | Content Cell  | 0 |
-| Content Cell  | 0 | Content Cell  | 0 |
-		
+# https://www.youtube.com/watch?v=vi_GdJn1evI
 
+|Firstname|Surname|Petname|
+|---------|-------|-------|
+|Prasad   |NULL   |NULL   |
+|Raju     |NULL   |NULL   |
+|NULL     |Koirala|NULL   |
+|NULL     |Shinde |NULL   |
+|NULL     |NULL   |Shivdya|
+
+```
+SELECT COALESCE (Firstname, Surname, Petname) as names from tb 
+or
+SELECT COALESCE (Firstname, Surname, Petname,'N/A') as names from tb 	
+```
+|Firstname|
+|---------|
+|Prasad   |
+|Raju     |
+|Koirala  |
+|Shinde   |
+|Shivdya  |
+	
 </ul>
 </h10>
 
