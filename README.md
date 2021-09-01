@@ -649,6 +649,18 @@ d006	Quality Management
 d008	Research
 d007	Sales
 ```
+-------------------------------------------------------------------------
+```
+COALESCE 
+	
+Example:	
+| First Header  | Default |
+| ------------- | ------- |
+| Content Cell  | 0 |
+| Content Cell  | 1 |
+		
+	
+```
 </ul>
 </h10>
 
