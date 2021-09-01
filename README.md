@@ -653,11 +653,11 @@ d007	Sales
 ```
 COALESCE 
 ```	
-<li><strong><em> DEAFAULT </em></strong> </li>	
+<li><strong><em> COALESCE </em></strong> </li>	
 	
 Example:
 	
-# https://www.youtube.com/watch?v=vi_GdJn1evI
+https://www.youtube.com/watch?v=vi_GdJn1evI
 
 |Firstname|Surname|Petname|
 |---------|-------|-------|
@@ -672,14 +672,14 @@ SELECT COALESCE (Firstname, Surname, Petname) as names from tb
 or
 SELECT COALESCE (Firstname, Surname, Petname,'N/A') as names from tb 	
 ```
-|Firstname|
+|names    |
 |---------|
 |Prasad   |
 |Raju     |
 |Koirala  |
 |Shinde   |
 |Shivdya  |
-	
+-------------------------------------------------------------------------------	
 </ul>
 </h10>
 
