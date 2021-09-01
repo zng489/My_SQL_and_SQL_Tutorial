@@ -657,10 +657,13 @@ COALESCE
 	
 Example:	
 	
-| First Header  | Default |
-| ------------- | ------- |
-| Content Cell  | 0 |
-| Content Cell  | 1 |
+|Firstname|Surname|Petname|
+| ------------- | ------- | ------- |
+| Content Cell  | 0 | Content Cell  | 0 |
+| Content Cell  | 1 | Content Cell  | 0 |
+| Content Cell  | 0 | Content Cell  | 0 |
+| Content Cell  | 0 | Content Cell  | 0 |
+| Content Cell  | 0 | Content Cell  | 0 |
 		
 
 </ul>
