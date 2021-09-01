@@ -654,7 +654,9 @@ d007	Sales
 COALESCE 
 ```	
 <li><strong><em> DEAFAULT </em></strong> </li>	
+	
 Example:	
+	
 | First Header  | Default |
 | ------------- | ------- |
 | Content Cell  | 0 |
