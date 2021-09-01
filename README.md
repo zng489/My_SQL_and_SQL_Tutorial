@@ -620,35 +620,51 @@ FROM salaries;
 ```
 -----------------------------------------------------
 ```
+IFNULL()
+```	
+	
+```
 SELECT * FROM departments
 ORDER BY dept_no;
+```
 
-|dept_no|dept_name|
-d001	Marketing
-d002	Finance
-d003	Human Resources
-d004	Production
-d005	Development
-d006	Quality Management
-d007	Sales
-d008	Research
-d009	Customer Service
-NULL	NULL	
-
+|dept_no  |dept_name|
+|---------|---------|
+|d001	  |Marketing|
+|d002	  |Finance|
+|d003	  |Human Resources|
+|d004	  |Production|
+|d005	  |Development|
+|d006	  |Quality Management|
+|d007	  |Sales|
+|d008	  |Research|
+|d009	  |Customer Service|
+|NULL	  |NULL|
+	
+```
+https://www.1keydata.com/pt/sql/sql-ifnull.php
+	
+The function IFNULL() is available in the system My SQL, but doesn`t in the SQL systems and Oracle.
+Esta função requer dois argumentos. Se o primeiro argumento não for NULL, a função apresenta o primeiro argumento. Caso contrário, é apresentado o segundo argumento. Normalmente esta função é utilizada para substituir o valor NULL por outro valor. É semelhante à função NVLno sistema Oracle e à função ISNULL no SQL Server.
+	
 SELECT dept_no, IFNULL(dept_name,'Department name not provide') as dept_name
 FROM departments
-
-dept_no	IFNULL(dept_name,'Department name not provide')
-d009	Customer Service
-d005	Development
-d002	Finance
-d003	Human Resources
-d001	Marketing
-d004	Production
-d006	Quality Management
-d008	Research
-d007	Sales
 ```
+|dept_no  |IFNULL(dept_name,'Department name not provide')|
+|---------|---------|
+|d009	|Customer Service|
+|d005	|Development|
+|d002	|Finance|
+|d003	|Human Resources|
+|d001	|Marketing|
+|d004	|Production|
+|d006	|Quality Management|
+|d008	|Research|
+|d007	|Sales|
+	
+	
+
+
 -------------------------------------------------------------------------
 ```
 COALESCE 
