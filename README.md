@@ -714,7 +714,12 @@ SELECT COALESCE (Firstname, Surname, Petname,'N/A') as names from tb
 </ul>
 </h10>
 
+observatorio_fiesc.createOrReplaceTempView('observatorio_fiesc')
 
+%sql
+
+select DT_DIA_MES_ANO_DATA_ADMISSAO from observatorio_fiesc
+WHERE DT_DIA_MES_ANO_DATA_ADMISSAO LIKE '%//%'
 
 
 
